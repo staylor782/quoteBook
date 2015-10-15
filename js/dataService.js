@@ -12,13 +12,17 @@ app.service('dataService', function() {
   ];
     
     this.getData = function() {
-        return this.quotes;
+        return quotes;
     };
     
-    this.addData = function(obj) {
+    this.addData = function(text, author) {
+        var obj = {text, author};
+        
         for(var prop in obj) {
             if(prop === 'author' || prop === 'text') {
-                quotes.push(obj);
+                if(prop === 'text' || prop === 'author') {
+                    quotes.push(obj);
+                };
             };
         };
     };

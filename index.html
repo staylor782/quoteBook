@@ -6,11 +6,23 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body ng-controller="mainCtrl">
-		<div>
+		
+        <h1>Quote Book</h1>
+        
+        <div>
+            <div>
+                <input placeholder="Quote Text, Author">
+                <button>Add Quote</button>
+                <button>Remove Quote</button>
+            </div>
+            <div>
+                <input placeholder="Search Quotes">
+                <button>Filter Quotes</button>
+            </div>
             <ul>
                 <li ng-repeat='quote in quoStuff'>
-                    <h1>{{quote.text}}</h1>
-                    <h4>{{quote.author}}</h4>
+                    <h2>{{quote.text}}</h2>
+                    <h4>- {{quote.author}}</h4>
                 </li>
             </ul>
         </div>
